@@ -23,8 +23,10 @@ def segunda_jogada():
 
 
 
-jogada = 0
+
 while True:
+    dado=0
+    jogada = 0
     while True:
         jogar = input('Deseja jogar o dado? S/N ').lower()
         jogada += 1
@@ -36,9 +38,11 @@ while True:
                 natural_craps = primeira_jogada()
                 if natural_craps == 'n':
                     print('VOCE É UM NATURAL! VOCÊ GANHOU!!!!')
+                    break;
 
                 elif natural_craps == 'c':
                     print('VOCÊ É UM CRAPS! VOCÊ PERDEU!!!!')
+                    break;
 
                 else:
                     print(f'SEU NÚMERO PONTO É {dado}')
@@ -50,6 +54,7 @@ while True:
                     print('VOCE PERDEU!!! jOGO ENCERRADO!')
                 if natural_craps == True:
                     print(f'O número {guardar} e {dado} são iguais! VOCE GANHOU!!!!')
+                    break;
             
 
 
@@ -60,7 +65,6 @@ while True:
     if jogar_novamente == 'n':
         print('JOGO ENCERRADO')
         break;
-
         
     
 
